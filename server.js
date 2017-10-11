@@ -48,7 +48,7 @@ app.use(function(req, res, next) {
 });
 
 // Routes
-app.post('/json-api-call/:id', function(req, res) {
+app.post('/json/:id', function(req, res) {
 
     var username = req.params.id;
 
