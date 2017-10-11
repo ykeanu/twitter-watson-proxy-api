@@ -50,8 +50,11 @@ app.use(function(req, res, next) {
 // Routes
 app.post('/json/:id', function(req, res) {
 
-    var username = req.params.id;
-
+    var username = {
+    from: req.params.id,
+    count: 50};
+    console.log(req.params.id);
+    
     //Promise Function
     T.get('/search/tweets.json', username)
         .then(function(stageOne) {
