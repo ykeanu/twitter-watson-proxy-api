@@ -1,0 +1,26 @@
+{
+  "name": "twitter-watson-proxy-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ykeanu/twitter-watson-proxy-api.git"
+  },
+  "author": "Ysrael \"Izzy\" Keanu Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ykeanu/twitter-watson-proxy-api/issues"
+  },
+  "homepage": "https://github.com/ykeanu/twitter-watson-proxy-api#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "twitter": "^1.7.1",
+    "watson-developer-cloud": "^2.41.1"
+  }
+}
