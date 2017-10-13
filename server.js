@@ -19,7 +19,7 @@ var T = new Twitter({
 });
 var paramsTwitter = {
     from: 'khloekardashian',
-    count: 50
+    count: 100
 };
 
 // Initialize Watson Personality API
@@ -51,7 +51,7 @@ app.post('/json/:id', function(req, res) {
 
     var username = {
     from: req.params.id,
-    count: 50};
+    count: 100};
     console.log(req.params.id);
 
     //Promise Function
