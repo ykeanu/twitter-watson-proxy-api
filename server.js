@@ -2,9 +2,7 @@
 
 // Global Variables
 var str = [];
-var tweets = "";
 var textTweet;
-var PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
 
 // Initialize dotenv
 var dotenv = require('dotenv');
@@ -25,6 +23,7 @@ var paramsTwitter = {
 };
 
 // Initialize Watson Personality API
+var PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
 var personality_insights = new PersonalityInsightsV3({
     username: process.env.WATSON_USERNAME,
     password: process.env.WATSON_PASSWORD,
@@ -58,10 +57,18 @@ app.post('/json/:id', function(req, res) {
     //Promise Function
     T.get('/search/tweets.json', username)
         .then(function(stageOne) {
+
+            var tweets;
+           
             for (var i = 0; i < stageOne.statuses.length; i++) {
-                tweets = stageOne.statuses[i].text;
+             // OPTION 1
+                tweets += stageOne.statuses[i].text;
             };
             return textTweet = tweets;
+             // OPTION 2
+            //     tweets.push(stageOne.statuses[i].text);
+            // };
+            // return textTweet = tweets.join(' ').toString();
         })
         // Watson Parameters
         .then(function(stageTwo) {
@@ -84,7 +91,7 @@ app.post('/json/:id', function(req, res) {
                 }
                 else {
                     // console.log(JSON.stringify(response, null, 2));
-                    res.json(response);
+                    return res.json(response);
                 }
             });
         });
