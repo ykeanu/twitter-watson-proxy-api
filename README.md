@@ -8,8 +8,8 @@
   var twitterHandle = taylorswift13;
   
   $.post(`https://twitter-watson-proxy-api.herokuapp.com/json/${twitterHandle}`, function(data) {
-        // YOUR CODE GOES HERE
-  }
+        console.log(data);
+  };
 ```
 
 ## Technologies Used
