@@ -16,4 +16,4 @@
 - Node.js
 - Express.js
 - dot.env
-- Heroku
+- Hostied via Heroku
