@@ -17,6 +17,3 @@
 - Express.js
 - dot.env
 - Heroku
-
-## Developer
-- Ysrael "Izzy" Hernandez | [GitHub](https://github.com/ykeanu)
